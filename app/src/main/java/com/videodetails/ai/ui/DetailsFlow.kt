@@ -14,7 +14,8 @@ data class DetailsUiState(
     val loading: Boolean = true,
     val aiLoading: Boolean = false,
     val aiSummary: String? = null,
-    val aiFailed: Boolean = false
+    val aiFailed: Boolean = false,
+    val aiError: String? = null
 )
 
 /**
@@ -47,7 +48,8 @@ fun detailsFlow(
                 info = info,
                 loading = false,
                 aiSummary = summary,
-                aiFailed = summary == null
+                aiFailed = summary == null,
+                aiError = if (summary == null) AiAnalyzer.lastError else null
             )
         )
     }

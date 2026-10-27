@@ -24,6 +24,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.ContentPaste
 import androidx.compose.material.icons.rounded.History
+import androidx.compose.material.icons.rounded.Key
 import androidx.compose.material.icons.rounded.Link
 import androidx.compose.material.icons.rounded.PlayCircle
 import androidx.compose.material.icons.rounded.Search
@@ -243,7 +244,10 @@ private fun TipCard(hasKey: Boolean, onOpenSettings: () -> Unit) {
                 color = MaterialTheme.colorScheme.onPrimaryContainer
             )
             if (!hasKey) {
-                TextButton(onClick = onOpenSettings, contentPadding = PaddingValues(0.dp)) {
+                Spacer(Modifier.height(4.dp))
+                Button(onClick = onOpenSettings, shape = RoundedCornerShape(12.dp)) {
+                    Icon(Icons.Rounded.Key, contentDescription = null, modifier = Modifier.size(18.dp))
+                    Spacer(Modifier.width(8.dp))
                     Text(stringResource(R.string.add_key_cta))
                 }
             }

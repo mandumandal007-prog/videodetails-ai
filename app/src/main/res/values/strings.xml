@@ -19,7 +19,7 @@
     <string name="label_link">लिंक</string>
     <string name="partial_note">इस प्लेटफ़ॉर्म ने पूरी जानकारी नहीं दी (जैसे Instagram लॉगिन-वॉल)। वीडियो खोलने के लिए बटन दबाएँ।</string>
     <string name="ai_summary">AI सारांश</string>
-    <string name="ai_no_key">AI सारांश के लिए Settings में अपनी फ्री Gemini API key डालें।</string>
+    <string name="ai_no_key">AI सारांश के लिए ऐप खोलें → Settings (⚙) में अपनी फ्री Gemini API key डालें।</string>
     <string name="ai_loading">AI सारांश बन रहा है…</string>
     <string name="ai_failed">AI सारांश नहीं बन पाया। key या इंटरनेट चेक करें।</string>
     <string name="no_link">शेयर किए गए टेक्स्ट में कोई लिंक नहीं मिला</string>
@@ -31,7 +31,7 @@
     <string name="get_details">डिटेल्स देखें</string>
     <string name="tip_title">कैसे इस्तेमाल करें</string>
     <string name="tip_body">किसी भी ऐप में वीडियो पर Share दबाएँ और VideoDetails AI चुनें — नीचे आधी स्क्रीन में डिटेल्स आ जाएँगी।</string>
-    <string name="add_key_cta">AI सारांश चालू करें →</string>
+    <string name="add_key_cta">Gemini API key डालें</string>
     <string name="history">हाल के वीडियो</string>
     <string name="history_empty">अभी कोई वीडियो नहीं देखा गया।</string>
     <string name="clear">साफ़ करें</string>

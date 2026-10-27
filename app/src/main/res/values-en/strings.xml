@@ -18,7 +18,7 @@
     <string name="label_link">Link</string>
     <string name="partial_note">This platform didn\'t share full details (e.g. Instagram login wall). Tap Open video to watch it.</string>
     <string name="ai_summary">AI summary</string>
-    <string name="ai_no_key">Add your free Gemini API key in Settings to get an AI summary.</string>
+    <string name="ai_no_key">To get an AI summary, open the app → Settings (⚙) and add your free Gemini API key.</string>
     <string name="ai_loading">Writing AI summary…</string>
     <string name="ai_failed">Couldn\'t create the AI summary. Check your key or internet.</string>
     <string name="no_link">No link found in the shared text</string>
@@ -30,7 +30,7 @@
     <string name="get_details">Get details</string>
     <string name="tip_title">How to use</string>
     <string name="tip_body">In any app, tap Share on a video and pick VideoDetails AI — details open in a panel on the bottom half of the screen.</string>
-    <string name="add_key_cta">Turn on AI summary →</string>
+    <string name="add_key_cta">Add Gemini key</string>
     <string name="history">Recent videos</string>
     <string name="history_empty">No videos yet.</string>
     <string name="clear">Clear</string>

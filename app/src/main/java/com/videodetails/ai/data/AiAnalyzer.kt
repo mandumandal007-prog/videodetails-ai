@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit
 object AiAnalyzer {
 
     /** Model change karna ho to sirf ye line badlo. */
-    private const val MODEL = "gemini-2.0-flash"
+    private const val MODEL = "gemini-flash-latest"
 
     private val JSON = "application/json; charset=utf-8".toMediaType()
 
@@ -25,6 +25,11 @@ object AiAnalyzer {
         .connectTimeout(20, TimeUnit.SECONDS)
         .readTimeout(45, TimeUnit.SECONDS)
         .build()
+
+    /** Last failure reason (HTTP code / Google ka message) — UI me dikhane ke liye. */
+    @Volatile
+    var lastError: String? = null
+        private set
 
     suspend fun summarize(info: VideoInfo, apiKey: String, hindi: Boolean): String? =
         withContext(Dispatchers.IO) {
@@ -57,32 +62,47 @@ object AiAnalyzer {
                     )
                     put(
                         "generationConfig",
-                        JSONObject().put("temperature", 0.4).put("maxOutputTokens", 512)
+                        JSONObject().put("temperature", 0.4).put("maxOutputTokens", 2048)
                     )
                 }.toString()
 
                 val request = Request.Builder()
-                    .url("https://generativelanguage.googleapis.com/v1beta/models/$MODEL:generateContent?key=$apiKey")
+                    .url("https://generativelanguage.googleapis.com/v1beta/models/$MODEL:generateContent")
+                    .header("X-goog-api-key", apiKey.trim())
+                    .header("Content-Type", "application/json")
                     .post(body.toRequestBody(JSON))
                     .build()
 
                 client.newCall(request).execute().use { response ->
                     val text = response.body?.string()
                     if (!response.isSuccessful || text == null) {
+                        val msg = text?.let {
+                            runCatching { JSONObject(it).optJSONObject("error")?.optString("message") }.getOrNull()
+                        }
+                        lastError = "HTTP ${response.code}" + (msg?.takeIf { it.isNotBlank() }?.let { ": ${it.take(160)}" } ?: "")
                         null
                     } else {
-                        JSONObject(text)
+                        lastError = null
+                        val parts = JSONObject(text)
                             .optJSONArray("candidates")
                             ?.optJSONObject(0)
                             ?.optJSONObject("content")
                             ?.optJSONArray("parts")
-                            ?.optJSONObject(0)
-                            ?.optString("text")
-                            ?.trim()
-                            ?.takeIf { it.isNotEmpty() }
+                        val joined = buildString {
+                            if (parts != null) {
+                                for (i in 0 until parts.length()) {
+                                    val part = parts.optJSONObject(i) ?: continue
+                                    if (part.optBoolean("thought", false)) continue
+                                    append(part.optString("text"))
+                                }
+                            }
+                        }.replace("**", "").trim()
+                        if (joined.isEmpty()) lastError = "Empty response"
+                        joined.takeIf { it.isNotEmpty() }
                     }
                 }
             } catch (e: Exception) {
+                lastError = e.message ?: e.javaClass.simpleName
                 null
             }
         }

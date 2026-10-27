@@ -339,7 +339,8 @@ private fun AiSection(state: DetailsUiState, hasApiKey: Boolean) {
                     color = bodyColor
                 )
                 state.aiFailed -> Text(
-                    text = stringResource(R.string.ai_failed),
+                    text = stringResource(R.string.ai_failed) +
+                        (state.aiError?.let { "\n($it)" } ?: ""),
                     style = MaterialTheme.typography.bodyMedium,
                     color = bodyColor
                 )

@@ -7,7 +7,7 @@ aur niche aadhi screen (bottom panel) me video ki details + AI summary aa jayegi
 - **Share target**: kisi bhi app se text/plain link share karo → app option list me aata hai
 - **Half-screen panel**: transparent activity, neeche 78% height ka rounded bottom sheet (previous app ke upar)
 - **Metadata fetch**: YouTube/TikTok/X ke liye oEmbed API, Instagram/Facebook/other ke liye OpenGraph (`og:title`, `og:image`, `og:description`) parsing
-- **AI summary (optional)**: Google Gemini API (`gemini-2.0-flash`) — key Settings me daalo, phone me hi save hoti hai
+- **AI summary (optional)**: Google Gemini API (`gemini-flash-latest`, key `X-goog-api-key` header me) — key Settings me daalo, phone me hi save hoti hai
 - **Hindi + English**: default Hindi, English device par English (`values-en`)
 - **Dark mode** support (Compose Material 3 color schemes)
 - **History**: last 20 videos locally (SharedPreferences)
