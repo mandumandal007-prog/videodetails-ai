@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">VideoDetails AI</string>
+    <string name="sheet_title">वीडियो डिटेल्स</string>
+    <string name="close">बंद करें</string>
+    <string name="loading">डिटेल्स ला रहे हैं…</string>
+    <string name="error_fetch">डिटेल्स नहीं मिलीं</string>
+    <string name="retry">फिर से कोशिश करें</string>
+    <string name="unknown_video">वीडियो (टाइटल नहीं मिला)</string>
+    <string name="open_video">वीडियो खोलें</string>
+    <string name="copy_link">लिंक कॉपी करें</string>
+    <string name="share">शेयर करें</string>
+    <string name="copied">लिंक कॉपी हो गया</string>
+    <string name="cannot_open">इसे खोलने वाला ऐप नहीं मिला</string>
+    <string name="label_platform">प्लेटफ़ॉर्म</string>
+    <string name="label_type">टाइप</string>
+    <string name="label_video_id">वीडियो ID</string>
+    <string name="label_domain">डोमेन</string>
+    <string name="label_link">लिंक</string>
+    <string name="partial_note">इस प्लेटफ़ॉर्म ने पूरी जानकारी नहीं दी (जैसे Instagram लॉगिन-वॉल)। वीडियो खोलने के लिए बटन दबाएँ।</string>
+    <string name="ai_summary">AI सारांश</string>
+    <string name="ai_no_key">AI सारांश के लिए Settings में अपनी फ्री Gemini API key डालें।</string>
+    <string name="ai_loading">AI सारांश बन रहा है…</string>
+    <string name="ai_failed">AI सारांश नहीं बन पाया। key या इंटरनेट चेक करें।</string>
+    <string name="no_link">शेयर किए गए टेक्स्ट में कोई लिंक नहीं मिला</string>
+    <string name="settings">Settings</string>
+    <string name="home_subtitle">Instagram, YouTube, TikTok या X का वीडियो लिंक डालें — या उस ऐप में Share → VideoDetails AI दबाएँ।</string>
+    <string name="paste_hint">वीडियो लिंक पेस्ट करें</string>
+    <string name="paste">पेस्ट करें</string>
+    <string name="invalid_link">सही लिंक डालें (https://…)</string>
+    <string name="get_details">डिटेल्स देखें</string>
+    <string name="tip_title">कैसे इस्तेमाल करें</string>
+    <string name="tip_body">किसी भी ऐप में वीडियो पर Share दबाएँ और VideoDetails AI चुनें — नीचे आधी स्क्रीन में डिटेल्स आ जाएँगी।</string>
+    <string name="add_key_cta">AI सारांश चालू करें →</string>
+    <string name="history">हाल के वीडियो</string>
+    <string name="history_empty">अभी कोई वीडियो नहीं देखा गया।</string>
+    <string name="clear">साफ़ करें</string>
+    <string name="key_title">Gemini API key</string>
+    <string name="key_help">key सिर्फ़ इसी फ़ोन में सेव होती है और सिर्फ़ Google को भेजी जाती है। key के बिना भी ऐप चलता है।</string>
+    <string name="get_key">फ्री key यहाँ से लें (aistudio.google.com)</string>
+    <string name="ai_language">AI सारांश की भाषा</string>
+    <string name="remove_key">key हटाएँ</string>
+    <string name="key_removed">key हटा दी गई</string>
+    <string name="save">सेव करें</string>
+    <string name="saved">सेव हो गया</string>
+</resources>

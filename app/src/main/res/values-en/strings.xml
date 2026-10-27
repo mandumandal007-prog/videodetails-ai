@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sheet_title">Video details</string>
+    <string name="close">Close</string>
+    <string name="loading">Fetching details…</string>
+    <string name="error_fetch">Couldn\'t fetch details</string>
+    <string name="retry">Try again</string>
+    <string name="unknown_video">Video (title not available)</string>
+    <string name="open_video">Open video</string>
+    <string name="copy_link">Copy link</string>
+    <string name="share">Share</string>
+    <string name="copied">Link copied</string>
+    <string name="cannot_open">No app found to open this</string>
+    <string name="label_platform">Platform</string>
+    <string name="label_type">Type</string>
+    <string name="label_video_id">Video ID</string>
+    <string name="label_domain">Domain</string>
+    <string name="label_link">Link</string>
+    <string name="partial_note">This platform didn\'t share full details (e.g. Instagram login wall). Tap Open video to watch it.</string>
+    <string name="ai_summary">AI summary</string>
+    <string name="ai_no_key">Add your free Gemini API key in Settings to get an AI summary.</string>
+    <string name="ai_loading">Writing AI summary…</string>
+    <string name="ai_failed">Couldn\'t create the AI summary. Check your key or internet.</string>
+    <string name="no_link">No link found in the shared text</string>
+    <string name="settings">Settings</string>
+    <string name="home_subtitle">Paste an Instagram, YouTube, TikTok or X video link — or tap Share → VideoDetails AI in that app.</string>
+    <string name="paste_hint">Paste video link</string>
+    <string name="paste">Paste</string>
+    <string name="invalid_link">Enter a valid link (https://…)</string>
+    <string name="get_details">Get details</string>
+    <string name="tip_title">How to use</string>
+    <string name="tip_body">In any app, tap Share on a video and pick VideoDetails AI — details open in a panel on the bottom half of the screen.</string>
+    <string name="add_key_cta">Turn on AI summary →</string>
+    <string name="history">Recent videos</string>
+    <string name="history_empty">No videos yet.</string>
+    <string name="clear">Clear</string>
+    <string name="key_title">Gemini API key</string>
+    <string name="key_help">Your key is saved only on this phone and sent only to Google. The app works without a key too.</string>
+    <string name="get_key">Get a free key (aistudio.google.com)</string>
+    <string name="ai_language">AI summary language</string>
+    <string name="remove_key">Remove key</string>
+    <string name="key_removed">Key removed</string>
+    <string name="save">Save</string>
+    <string name="saved">Saved</string>
+</resources>
